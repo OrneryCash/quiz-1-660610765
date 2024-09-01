@@ -1,5 +1,6 @@
 // Find the sum of numbers from 1 to n, increasing by 5 and can be divisible by 3 or 7.
-// Ex. 9 + 18 + 27 + ... + 9n = 54
+// q1_extra(9) = 6
+// q1_extra(30) = 6 + 21 = 27
 
 
 console.log(q1_extra(9));
