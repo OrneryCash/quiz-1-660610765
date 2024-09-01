@@ -7,19 +7,16 @@ interface Person {
 
 /* assign interface/type to the function definition properly */
 const q2 = (person: Person): Person => {
-  person.age = Math.max(15, person.age - 10);
-  if (person.age % 7 == 0) {
-    return {
-      ...person,
-      luckyAge: true
-    }
-  } else {
-    return {
-      ...person,
-      luckyAge: false
-    }
+  let age = person.age - 10;
+
+  if (age < 15) {
+    age = 15;
   }
-};
+
+  let luckyAge = age % 7 == 0;
+
+  return { ...person, age, luckyAge }
+}
 
 //test cases
 const input1 = { name: "John", age: 59 };
