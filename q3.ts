@@ -6,13 +6,12 @@ interface Monster {
 
 /* assign interface/type to the function definition properly */
 const q3 = (mons: Monster[]): Monster[] => {
-  const n: number = mons.length;
-  const sum = mons.reduce((prev, curr) => prev + curr.power, 0)
-  const avg = sum / n;
+  const avg = mons.reduce((curr, mon) => {
+    return (curr + mon.power) / mons.length;
+  }, 0);
 
-  const ans = mons.filter(mon => mon.power >= avg)
-  return ans;
-};
+  return mons.filter(mon => mon.power >= avg);
+}
 
 //test cases
 const input1 = [
