@@ -1,4 +1,4 @@
-import func from "../q1";
+import func from "../q1_odd";
 
 const inputs = [
   [1, 3],
